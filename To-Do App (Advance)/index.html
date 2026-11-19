@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Advance To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header>
+            <div>
+                <h1 class="logo">TaskFlow</h1>
+                <p id="summary" class="method">0 of 0 tasks completed</p>
+            </div>
+            <button id="themeBtn" class="tbtn">Light mode</button>
+        </header>
+
+        <div class="progress"><span id="bar"></span></div>
+
+        <form id="taskForm">
+            <input type="text" id="taskInput" class="task" placeholder="What needs to be done?">
+            <div class="form-row">
+                <select id="category">
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                    <option value="Business">Business</option>
+                    <option value="Personal">Personal</option>
+                </select>
+
+                <select id="level">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <input type="date" id="date">
+
+                <button type="submit" id="submit">Add task</button>
+            </div>
+        </form>
+
+        <section class="toolbar">
+            <input id="search" type="search" placeholder="Search tasks...">
+            <div class="tabs" id="filters" role="group" aria-label="Filter tasks">
+                <button type="button" data-filter="all" class="on">All</button>
+                <button type="button" data-filter="active">Active</button>
+                <button type="button" data-filter="done">Done</button>
+            </div>
+
+            <select id="search-category">
+                <option value="All">All categories</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Business">Business</option>
+                <option value="Personal">Personal</option>
+            </select>
+
+            <select id="sort" aria-label="Sort">
+                <option value="manual">Manual order</option>
+                <option value="due">Due date</option>
+                <option value="priority">Priority</option>
+                <option value="newest">Newest first</option>
+            </select>
+        </section>
+
+      
+        <ul id="taskList" class="task-list"></ul>
+
+        <footer class="foot">
+            <span class="muted">Drag tasks to reorder (Manual order).</span>
+            <button id="clearDone" class="ghost">Clear completed</button>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
