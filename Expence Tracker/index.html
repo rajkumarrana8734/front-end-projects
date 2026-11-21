@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Expence Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   <main class="container">
+    <header>
+       <h1>Income & Expence Tracker</h1>
+    </header>
+    <div class="container1">
+         <div><small>Balance</small><br><b class="Balance">₹0</b></div>
+         <div><small>Income</small><br><b class="Income">₹0</b></div>
+         <div><small>Expence</small><br><b class="Expence">₹0</b></div>
+    </div>
+
+    <form class="container2">
+      <input type="text" placehonder="e.g(salary,gift)">
+      <input type="number" placeholder="Amount ₹">
+      <select>
+        <option selected disabled>Choose Balance type</option>
+        <option>Expence</option>
+        <option>Income</option>
+      </select><br>
+      <button class="btn" type="submit">Add</button>
+    </form>
+
+    <footer>
+        <div>
+            Tracker Empty !
+        </div>
+    </footer>
+   </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
