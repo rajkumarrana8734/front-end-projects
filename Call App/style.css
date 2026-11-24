@@ -331,3 +331,30 @@ body {
   background-color: #f24b4b;
   color: #ffffff;
 }
+
+.card,
+.card-layer {
+  transition: background-color 0.3s ease;
+}
+
+.dot.white {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+
+.card.colored .name,
+.card.colored .info-row .label,
+.card.colored .info-row .value {
+  color: #ffffff;
+}
+
+.card.colored .btn-call {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.card.colored .btn-message {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
