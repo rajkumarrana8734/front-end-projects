@@ -16,7 +16,7 @@ const purposeInput = textInputs[3];
 
 let currentIndex = 0;
 
-/* ---------- localStorage ---------- */
+
 function getTasks() {
   try {
     return JSON.parse(localStorage.getItem('task')) || [];
@@ -29,7 +29,7 @@ function saveTasks(tasks) {
   localStorage.setItem('task', JSON.stringify(tasks));
 }
 
-/* ---------- card banane ke helpers ---------- */
+
 function createInfoRow(label, value) {
   const row = document.createElement('div');
   row.className = 'info-row';
@@ -55,7 +55,7 @@ function createCard(task) {
     card.style.backgroundColor = task.color;
   }
 
-  // avatar
+  
   const avatar = document.createElement('div');
   avatar.className = 'avatar';
   const img = document.createElement('img');
@@ -64,12 +64,12 @@ function createCard(task) {
   img.onerror = () => img.remove(); // galat URL ho to sirf orange circle dikhega
   avatar.appendChild(img);
 
-  // name
+
   const name = document.createElement('h2');
   name.className = 'name';
   name.textContent = task.fullname;
 
-  // buttons
+
   const actions = document.createElement('div');
   actions.className = 'actions';
 
@@ -97,7 +97,7 @@ function createCard(task) {
   return card;
 }
 
-/* ---------- card dikhana ---------- */
+
 function showcard() {
   const tasks = getTasks();
   cardStack.innerHTML = '';
@@ -108,7 +108,6 @@ function showcard() {
   layer1.className = 'card-layer layer-1';
   cardStack.append(layer2, layer1);
 
-  // koi card nahi hai
   if (tasks.length === 0) {
     const empty = document.createElement('div');
     empty.className = 'card';
@@ -126,7 +125,6 @@ function showcard() {
 
   const task = tasks[currentIndex];
 
-  // piche ki layers bhi card ke color ki
   if (task.color && task.color !== '#ffffff') {
     layer1.style.backgroundColor = task.color;
     layer2.style.backgroundColor = task.color;
@@ -135,7 +133,7 @@ function showcard() {
   cardStack.appendChild(createCard(task));
 }
 
-/* ---------- form open / close ---------- */
+
 openModalBtn.addEventListener('click', function () {
   form.style.display = 'block';
   mainContainer.style.display = 'none';
@@ -146,7 +144,6 @@ closeModalBtn.addEventListener('click', function () {
   mainContainer.style.display = 'flex';
 });
 
-/* ---------- form submit ---------- */
 noteForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -181,7 +178,7 @@ noteForm.addEventListener('submit', function (e) {
   showcard();
 });
 
-/* ---------- up / down arrows ---------- */
+
 upBtn.addEventListener('click', function () {
   currentIndex--;
   showcard();
