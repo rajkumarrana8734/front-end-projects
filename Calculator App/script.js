@@ -135,6 +135,7 @@ keysEl.addEventListener("click", (e) => {
     case "delete":   deleteLast(); break;
     case "percent":  percent(); break;
   }
+
   updateDisplay();
 });
 
@@ -160,6 +161,8 @@ document.addEventListener("keydown", (e) => {
   else if (k === "Escape") clearAll();
   else if (k === "%") percent();
   else return;
+
+
 
   updateDisplay();
 });

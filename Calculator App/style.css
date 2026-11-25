@@ -71,10 +71,16 @@ button{
     height:65px;
     border-radius: 50%;
     border:none;
+     cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
 
 
     
 
+}
+
+button:active {
+    transform: scale(0.9);
 }
 
 .key-zero{
