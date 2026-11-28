@@ -7,11 +7,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container">
-        <header class="header">
-     
-        </header>
-    </main>
+   <header>
+  <div class="wrap"><nav>
+    <b class="head-name">Aarav Patel</b>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="theme" type="button" aria-label="Toggle dark mode">Dark</button></li>
+    </ul>
+  </nav></div>
+</header>
+
+
+<main class="wrap">
+  <section class="hero" id="top">
+    <p>Hi, I’m Aarav.</p>
+    <h1 class="hero-head">I build web apps, front to back.</h1>
+    <p class="role">I’m a <span id="typed"></span><i class="cursor"></i></p>
+    <p class="lead">Fresher developer from Ahmedabad. I like turning ideas into working products with clean code, simple design and a REST API behind them.</p>
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn" href="#contact">Hire me</a>
+  </section>
+
+  <section id="about">
+    <h2>About and skills</h2>
+    <p class="lead" style="margin-top:0">I finished my B.Tech in Computer Engineering and have spent the last year building projects, contributing to small open-source repos and learning how a full app fits together.</p>
+    <ul class="skills">
+      <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>MySQL</li><li>Git and GitHub</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="frontend" aria-pressed="false">Frontend</button>
+      <button type="button" data-f="fullstack" aria-pressed="false">Full-stack</button>
+    </div>
+    <div class="grid">
+      <article class="card" data-c="frontend"><h3>Weather Now</h3><p>Search any city and see live weather using a public API. Built with plain JavaScript and fetch.</p><span class="tag">HTML · CSS · JavaScript</span></article>
+      <article class="card" data-c="fullstack"><h3>Task Tracker</h3><p>Sign up, log in and manage daily tasks. Includes JWT login and a REST API.</p><span class="tag">React · Node · MongoDB</span></article>
+      <article class="card" data-c="fullstack"><h3>Student Notes</h3><p>Upload, search and share class notes with classmates. Role-based access for teachers.</p><span class="tag">Express · MySQL · EJS</span></article>
+      <article class="card" data-c="frontend"><h3>Expense Splitter</h3><p>Split bills between friends and see who owes what. Works fully in the browser.</p><span class="tag">HTML · CSS · JavaScript</span></article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="form" novalidate>
+      <div><label for="name">Name</label><input id="name" required autocomplete="name"></div>
+      <div><label for="email">Email</label><input id="email" type="email" required autocomplete="email"></div>
+      <div><label for="text">Message</label><textarea id="text" rows="4" required></textarea></div>
+      <button class="btn primary" type="submit">Send message</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Aarav Patel. Built with HTML, CSS and JavaScript.</div></footer>
+
+    
 
 
     <script src="script.js"></script>

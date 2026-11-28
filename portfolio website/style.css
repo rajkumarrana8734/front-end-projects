@@ -1,5 +1,333 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background:linear-gradient(120deg,#0b3d1e, #2f7a2f, #0f4c5c, #08121f, #2f7a2f);                 
+  color: #EAF2FF;   
+   background-size: 400% 400%; 
+   background-attachment: fixed;               
+  animation: waterFlow 18s ease-in-out infinite;                  
+  font-family: 'DM Sans', system-ui, sans-serif;
+  line-height: 1.65;
+  font-size: 17px;
+}
+@keyframes waterFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }      
+}
+
+.head-name{
+    font-size: 30px;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid #FFC93C;
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  background: #040d1e;                
+  border-bottom: 1px solid #2A5AA8;
+  z-index: 5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+nav b {
+  font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
+  font-size: 1.15rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #A9C3EA;                      
+  font-size: .95rem;
+}
+
+nav a:hover { 
+    color: #FFFFFF;
+    text-decoration: underline;
+ }
+
+#theme{
+    padding:10px;
+    background-color:#040d1e ;
+    color: #EAF2FF;   
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px rgb(155, 151, 151);
+}
+
+
+#theme:hover{
+    background-color:#0a1933 ;
+}
+
+section { padding: 72px 0 8px; }
+
+h1, h2, h3 {
+  font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  margin: 8px 0 18px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+
+.hero { padding-top: 64px; }
+
+.hero-head{
+    animation: hero 5s ease-in-out infinite;  
+}
+
+@keyframes hero {
+  0%   { color:red; }
+  50%  { color:white; }
+  100% { color:red; }      
+}
+.role {
+  font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
+  font-size: 1.4rem;
+  color: #A9C3EA;
+  min-height: 2rem;
+}
+
+.role span {
+  background: #FFC93C;
+  color: #0B2A5B;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: #EAF2FF;
+  vertical-align: -3px;
+  margin-left: 3px;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.lead {
+  max-width: 56ch;
+  margin: 20px 0 28px;
+  color: #A9C3EA;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid #EAF2FF;
+  color: #EAF2FF;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn.primary {
+  background: #FFC93C;
+  color: #0B2A5B;
+  border-color: #FFC93C;
+  font-weight: 700;
+}
+
+.btn + .btn { margin-left: 10px; }
+
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: #123A7A;                 
+  border: 1px solid #2A5AA8;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: .95rem;
+}
+
+.skills li:hover{
+    background: #072657;  
+}
+
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  background: none;
+  border: 1px solid #2A5AA8;
+  color: #EAF2FF;
+  border-radius: 999px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font: inherit;
+  font-size: .9rem;
+}
+
+.filters button[aria-pressed="true"] {
+  background: #EAF2FF;               
+  color: #0B2A5B;
+  border-color: #EAF2FF;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #123A7A;
+  border: 1px solid #2A5AA8;
+  border-left: 6px solid #FFC93C;
+  border-radius: 6px;
+  padding: 22px;
+}
+
+.card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+
+.card p {
+  color: #A9C3EA;
+  font-size: .95rem;
+  margin-bottom: 12px;
+}
+
+.tag { font-size: .8rem; color: #A9C3EA; }
+
+.card[hidden] { display: none; }
+
+
+form {
+  display: grid;
+  gap: 14px;
+  max-width: 520px;
+}
+
+label { font-size: .9rem; color: #A9C3EA; }
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2A5AA8;
+  background: #123A7A;
+  color: #EAF2FF;
+  font: inherit;
+}
+
+#msg { min-height: 1.5rem; font-weight: 500; }
+
+.err { color: #FF8A8A; }              
+.ok  { color: #6EE7A8; }
+
+
+footer {
+  margin-top: 72px;
+  border-top: 1px solid #2A5AA8;
+  padding: 24px 0;
+  color: #A9C3EA;
+  font-size: .9rem;
+}
+
+
+@media (max-width: 560px) {
+  nav ul { gap: 12px; }
+  .btn + .btn { margin: 10px 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+
+
+body.light { background: #F4F8FF; color: #0B2A5B; }
+
+body.light header { background: #FFFFFF; border-bottom-color: #CFDCF2; }
+body.light nav a,
+body.light .role,
+body.light .lead,
+body.light .card p,
+body.light .tag,
+body.light label,
+body.light footer { color: #4A5F85; }
+body.light nav a:hover { color: #0B2A5B; }
+
+body.light .role span { color: #0B2A5B; }
+body.light .cursor { background: #0B2A5B; }
+
+body.light .btn { border-color: #0B2A5B; color: #0B2A5B; }
+body.light .btn.primary { background: #FFC93C; border-color: #FFC93C; }
+
+.btn.primary:hover{background-color:#dcae39 ;}
+
+body.light .skills li,
+body.light .card,
+body.light input,
+body.light textarea { background: #FFFFFF; border-color: #CFDCF2; color: #0B2A5B; }
+body.light .card { border-left-color: #FFC93C; }
+
+body.light .filters button { border-color: #CFDCF2; color: #0B2A5B; }
+body.light .filters button[aria-pressed="true"] { background: #0B2A5B; color: #FFFFFF; border-color: #0B2A5B; }
+
+body.light footer { border-top-color: #CFDCF2; }
+body.light .err { color: #D64545; }
+body.light .ok { color: #2E9E6B; }
